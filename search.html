@@ -1,32 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Search Parts</title>
-<link rel="stylesheet" href="hewoo.css">
+<title>CSS is awesome animation</title>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    perspective: 600px;
+}
+
+/* Scene container */
+.scene {
+    position: relative;
+}
+
+.scene * {
+    position: absolute;
+}
+
+/* Text container */
+.texts {
+    font-size: 6vmin;
+    animation: texts 12s infinite linear;
+}
+
+/* fade effect on sides */
+.texts::after {
+    content: '';
+    position: absolute;
+    inset: -7.5em -1.5em;
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+/* each rotating text layer */
+.text {
+    animation: text 8s linear infinite;
+    color: hsl(calc(var(--text) * 90), 75%, 75%);
+}
+
+/* animation delay per layer */
+.text:nth-child(1) { animation-delay: 0s; }
+.text:nth-child(2) { animation-delay: -2s; }
+.text:nth-child(3) { animation-delay: -4s; }
+.text:nth-child(4) { animation-delay: -6s; }
+
+/* letters */
+.text span {
+    inset: -1em;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    user-select: none;
+    transform:
+        translateY(calc((var(--i) - 6) * 0.6em))
+        rotateY(calc(var(--i) * 20deg))
+        translateZ(1.5em)
+        rotateZ(-40deg);
+}
+
+/* animations */
+@keyframes texts {
+    from {
+        transform: rotateZ(0deg) rotateX(20deg) rotateZ(360deg);
+    }
+    to {
+        transform: rotateZ(360deg) rotateX(20deg) rotateZ(0deg);
+    }
+}
+
+@keyframes text {
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+</style>
+
 </head>
 <body>
-<header class="navvvbar">
- <div class="logo">Bollozos Car Parts Garage</div>
-<nav>
 
+<div class="scene">
+    <div class="texts">
 
-</ul>
-    
-</nav>
+        <div class="text" style="--text:0;">
+            <span style="--i:0;">A</span>
+            <span style="--i:1;">R</span>
+            <span style="--i:2;">M</span>
+            <span style="--i:3;">A</span>
+            <span style="--i:4;">N</span>
+            <span style="--i:5;">D</span>
+            <span style="--i:6;">Y</span>
+            <span style="--i:7;"> </span>
+            <span style="--i:8;">B</span>
+            <span style="--i:9;">O</span>
+            <span style="--i:10;">L</span>
+            <span style="--i:11;">L</span>
+            <span style="--i:12;">O</span>
+            <span style="--i:13;">Z</span>
+            <span style="--i:14;">O</span>
+            <span style="--i:15;">S</span>
+        </div>
 
-</header>
+        <div class="text" style="--text:1;">
+            <span style="--i:0;">M</span>
+            <span style="--i:1;">G</span>
+            <span style="--i:2;">A</span>
+            <span style="--i:3;"> </span>
+            <span style="--i:4;">K</span>
+            <span style="--i:5;">A</span>
+            <span style="--i:6;"> </span>
+            <span style="--i:7;">I</span>
+            <span style="--i:8;">D</span>
+            <span style="--i:9;">O</span>
+            <span style="--i:10;">L</span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+        </div>
 
+         <div class="text" style="--text:2;">
+            <span style="--i:0;">A</span>
+            <span style="--i:1;">R</span>
+            <span style="--i:2;">M</span>
+            <span style="--i:3;">A</span>
+            <span style="--i:4;">N</span>
+            <span style="--i:5;">D</span>
+            <span style="--i:6;">Y</span>
+            <span style="--i:7;"> </span>
+            <span style="--i:8;">B</span>
+            <span style="--i:9;">O</span>
+            <span style="--i:10;">L</span>
+            <span style="--i:11;">L</span>
+            <span style="--i:12;">O</span>
+            <span style="--i:13;">Z</span>
+            <span style="--i:14;">O</span>
+            <span style="--i:15;">S</span>
+        </div>
+<div class="text" style="--text:3;">
+            <span style="--i:0;">M</span>
+            <span style="--i:1;">G</span>
+            <span style="--i:2;">A</span>
+            <span style="--i:3;"> </span>
+            <span style="--i:4;">K</span>
+            <span style="--i:5;">A</span>
+            <span style="--i:6;"> </span>
+            <span style="--i:7;">I</span>
+            <span style="--i:8;">D</span>
+            <span style="--i:9;">O</span>
+            <span style="--i:10;">L</span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+        </div>
 
-<section class="hero">
-<div class="hero-content">
-
-<h1>Search</h1>
-
-
-
- <button onclick="window.location.href='index.html'">
-  Go Back Home
+    </div>
+</div>
 
 </body>
 </html>

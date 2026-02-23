@@ -13,6 +13,7 @@ font-family: 'Inter', sans-serif;
 background-color: #E5E5E5;
 color: #111;
   line-height: 1.6;
+  
 }
 .navvvbar {
     display: flex;
@@ -40,7 +41,7 @@ color: #111;
     text-decoration: none;
     color: #111;
     font-size: 19px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .navvvbar ul li a:hover {
@@ -59,26 +60,45 @@ align-items: center;
     padding: 80px;
 }
 
+
+
+
+
+
+
+
 .hero-content {
     max-width: 600px;
+    margin-top: -200px;
 }
 
 .hero h1 {
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: -5px
 }
 
-.hero span {
-    text-decoration: underline;
-}
 
+.about h4 {
+    font-size: 30px;
+    font-weight: 2;
+    letter-spacing: -3px
+}
 
 
 .uplok-image img {
-    width: 300px;
-    height: 300px;
-    margin-right: 500px;
+    width: 130%;     
+    max-width: 700px;
+    height: auto;    
+    display: block;   
+    margin-left: 100;
+    margin-right: auto;
+    position: relative;
+    left: -100px;
+    top: -70px;
+    
 }
+
 
 .service-image img {
     width: 450px;
@@ -86,37 +106,68 @@ align-items: center;
     margin-right: 450px;
 }
 
-.projects {
-    padding: 80px;
+.about {
+    padding: 60px 90px;
+    margin-top: -100px; 
 }
 
 .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    text-align: left;   
 }
 
 .section-header h2 {
-    font-weight: 500;
-    margin-bottom: 10px;
+    margin-top: 0;       
+    margin-bottom: 10px; 
+    font-size: 40px;    
 }
 
+
 .section-header hr {
-    border: none;
-    height: 1px;
-    background: #111;
+    display: none; 
+}
+
+.about h4 {
+    text-align: left;       
+    font-weight: 200;
+    line-height: 1.6;
+    max-width: 800px;      
+    margin: 0 0 40px 0;     
 }
 
 .project-grid {
     max-width: 1800px;
     display: flex;
-    gap: 30px;
-      margin: 0 auto;
+    flex-wrap: wrap;       
+    gap: 30px;             
+    justify-content: flex-start; 
+    margin: 0 auto;
+}
+
+.project-card {
+    
+    
+    width: 300px;           
+    text-align: left;        
+    padding: 15px;
+}
+
+.project-card img {
+             width: 100%;
+       height: 200px;          
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .project-card h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 16px;       
+    margin-bottom: 8px;
 }
 
+.project-card p {
+    font-size: 14px;
+    color: #555;
+}
 
 
 
@@ -126,34 +177,65 @@ height: 350px;
 object-fit: cover;
 }
 
+.Services {
+    padding: 60px 90px;
+}
 
+.services-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 300px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+}
 
 .contact {
-    padding: 80px;
+    padding: 80px 90px;        
+    display: flex;
+    flex-direction: column;
+    align-items: left;      
 }
 
 form {
-display: flex;
+    display: flex;
     flex-direction: column;
-gap: 20px;
-    max-width: 500px;
+    gap: 20px;
+    width: 100%;              
+    max-width: 500px;          
 }
 
-input, textarea {
+
+
+
+
+    input, textarea {
     padding: 12px;
     border: 1px solid #111;
     background: transparent;
     font-family: inherit;
+    width: 100%;               
+    box-sizing: border-box;
 }
 
 textarea {
-height: 120px;
-resize: none;
+    height: 120px;
+    resize: none;
 }
-
-
-
-
 
 button {
     padding: 12px;
@@ -161,5 +243,6 @@ button {
     background: #111;
     color: #fff;
     cursor: pointer;
+    width: 150px;              
+    align-self: flex-start;    
 }
-
