@@ -4,35 +4,47 @@ padding: 0;
     box-sizing: border-box;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
 font-family: 'Inter', sans-serif;
 background-color: #E5E5E5;
 color: #111;
   line-height: 1.6;
 }
-
-   .navvvbar {
-display: flex;
-    justify-content: space-between;
-align-items: center;
-padding: 40px 80px;
-}
-
-   .logo {
-font-weight: 600;
-font-size: 28px;
-}
-
-    .navvvbar ul {
-list-style: none;
+.navvvbar {
     display: flex;
-    gap: 4px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;    
+    border-bottom: 1px solid #ddd;
 }
 
-.navbar a {
-text-decoration: none;
+
+.logo {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.navvvbar ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.navvvbar ul li a {
+    text-decoration: none;
     color: #111;
-    font-size: 14px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.navvvbar ul li a:hover {
+    color: red;
 }
 
 
@@ -63,9 +75,15 @@ align-items: center;
 
 
 .uplok-image img {
-    width: 400px;
-    height: 400px;
-    margin-right: 300px;
+    width: 850px;
+    height: 500px;
+    margin-right: 10px;
+}
+
+.service-image img {
+    width: 450px;
+    height: 500px;
+    margin-right: 450px;
 }
 
 .projects {
@@ -88,8 +106,10 @@ align-items: center;
 }
 
 .project-grid {
+    max-width: 1800px;
     display: flex;
     gap: 30px;
+      margin: 0 auto;
 }
 
 .project-card h3 {
