@@ -58,6 +58,8 @@ display: flex;
         justify-content: space-between;
 align-items: center;
     padding: 80px;
+    
+    
 }
 
 
@@ -68,7 +70,7 @@ align-items: center;
 
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
     margin-top: -200px;
 }
 
@@ -86,19 +88,43 @@ align-items: center;
 }
 
 
+
+
+
+
+
+
 .uplok-image img {
     width: 130%;     
-    max-width: 700px;
+    max-width: 1000px;
     height: auto;    
     display: block;   
     margin-left: 100;
     margin-right: auto;
     position: relative;
-    left: -100px;
+    left: -120px;
     top: -70px;
+    
     
 }
 
+.image-line1 {
+    position: absolute;
+    bottom: 274px;      
+    left: 0;            
+    width: 1700px;     
+    height: 1.5px;
+    background: #111;
+}
+
+.image-line2 {
+    position: absolute;
+    bottom: -800px;      
+    left: 0;            
+    width: 1700px;     
+    height: 1.5px;
+    background: #111;
+}
 
 .service-image img {
     width: 450px;
@@ -133,6 +159,15 @@ align-items: center;
     line-height: 1.6;
     max-width: 800px;      
     margin: 0 0 40px 0;     
+}
+
+.about h5 {
+    text-align: left;       
+    font-weight: 280;
+    line-height: 1.6;
+    max-width: 860px;      
+    margin: 0 0 40px 0;
+    font-size: 20px;     
 }
 
 .project-grid {
@@ -210,6 +245,30 @@ object-fit: cover;
     flex-direction: column;
     align-items: left;      
 }
+
+.logo-image1 img {
+    width: 40px;
+    height: auto;
+}
+
+.logo-image2 img {
+    width: 40px;
+    height: auto;
+    display: flex;
+    gap: 1px;  
+    margin-bottom: 20px;
+    
+}
+
+.logo-image3 img {
+    width: 40px;
+    height: auto;
+    display: flex;
+    gap: 15px; 
+
+}
+
+
 
 form {
     display: flex;
